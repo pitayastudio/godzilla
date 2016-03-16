@@ -1,0 +1,334 @@
+
+/**************************************************************************************************/
+/* COMMON */
+
+h1, p {
+  color: #333;
+}
+
+.settings-field-name {
+  text-align: left;
+  vertical-align: top;
+}
+
+/**************************************************************************************************/
+/* index.html */
+
+body {
+}
+
+#header {
+  background-color: #fee;
+  height: 30px;
+  padding: 15px 0 0 15px;
+  text-align: left;
+}
+
+#godzilla-logo {
+}
+
+#main-content {
+  border: 1px solid lightgray;
+  background-color: #efe;
+  height: 520px;
+  position: relative;
+}
+
+#footer {
+	padding: 10px 0 0 15px;
+  text-align: left;
+}
+
+/**************************************************************************************************/
+/* new_game_setup.html */
+
+#time-limit {
+  width: 20px;
+}
+
+#time-countdown-times {
+  width: 20px;
+}
+
+#time-countdown-sec {
+  width: 20px;
+}
+
+/**************************************************************************************************/
+/* game_play.html */
+
+#left-panel {
+  border-right: 1px solid lightgray;
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 280px;
+}
+
+#right-panel {
+  display: inline-block;
+  height: 100%;
+  left: 280px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: 460px;
+}
+
+#game-settings {
+  border-bottom: 1px solid lightgray;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#game-status-and-history {
+  border-bottom: 1px solid lightgray;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#game-control {
+  padding: 10px;
+}
+
+/**************************************************************************************************/
+/* game_settings.html */
+
+
+/**************************************************************************************************/
+/* game_status.html */
+
+/**************************************************************************************************/
+/* game_control.html */
+
+.control-block-btn {
+  width: 120px;
+}
+
+/**************************************************************************************************/
+/* board.html */
+
+#board {
+  border-spacing: 0;
+}
+
+#board td {
+  border: 0;
+  cursor: pointer;
+  float: left;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+  width: 21px;
+}
+
+#board td.border {
+  cursor: default;
+  text-align: center;
+}
+
+.board-normal-vacant {
+  content: url(../images/normal.gif);
+}
+
+.board-normal-black {
+  content: url(../images/black.gif);
+}
+
+.board-normal-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-normal-white {
+  content: url(../images/white.gif);
+}
+
+.board-normal-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-star-vacant {
+  content: url(../images/star.gif);
+}
+
+.board-star-black {
+  content: url(../images/black.gif);
+}
+
+.board-star-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-star-white {
+  content: url(../images/white.gif);
+}
+
+.board-star-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-bottom-vacant {
+  content: url(../images/bottom.gif);
+}
+
+.board-bottom-black {
+  content: url(../images/black.gif);
+}
+
+.board-bottom-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-bottom-white {
+  content: url(../images/white.gif);
+}
+
+.board-bottom-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-bottom-left-vacant {
+  content: url(../images/bottom_left.gif);
+}
+
+.board-bottom-left-black {
+  content: url(../images/black.gif);
+}
+
+.board-bottom-left-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-bottom-left-white {
+  content: url(../images/white.gif);
+}
+
+.board-bottom-left-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-bottom-right-vacant {
+  content: url(../images/bottom_right.gif);
+}
+
+.board-bottom-right-black {
+  content: url(../images/black.gif);
+}
+
+.board-bottom-right-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-bottom-right-white {
+  content: url(../images/white.gif);
+}
+
+.board-bottom-right-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-top-vacant {
+  content: url(../images/top.gif);
+}
+
+.board-top-black {
+  content: url(../images/black.gif);
+}
+
+.board-top-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-top-white {
+  content: url(../images/white.gif);
+}
+
+.board-top-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-top-left-vacant {
+  content: url(../images/top_left.gif);
+}
+
+.board-top-left-black {
+  content: url(../images/black.gif);
+}
+
+.board-top-left-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-top-left-white {
+  content: url(../images/white.gif);
+}
+
+.board-top-left-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-top-right-vacant {
+  content: url(../images/top_right.gif);
+}
+
+.board-top-right-black {
+  content: url(../images/black.gif);
+}
+
+.board-top-right-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-top-right-white {
+  content: url(../images/white.gif);
+}
+
+.board-top-right-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-left-vacant {
+  content: url(../images/left.gif);
+}
+
+.board-left-black {
+  content: url(../images/black.gif);
+}
+
+.board-left-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-left-white {
+  content: url(../images/white.gif);
+}
+
+.board-left-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.board-right-vacant {
+  content: url(../images/right.gif);
+}
+
+.board-right-black {
+  content: url(../images/black.gif);
+}
+
+.board-right-black-is-latest-move {
+  content: url(../images/black-is-latest-move.png);
+}
+
+.board-right-white {
+  content: url(../images/white.gif);
+}
+
+.board-right-white-is-latest-move {
+  content: url(../images/white-is-latest-move.png);
+}
+
+.is-latest-move {
+}
+/**************************************************************************************************/

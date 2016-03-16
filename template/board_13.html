@@ -1,0 +1,115 @@
+<table id="board">
+  <tr>
+    <td class="border">&nbsp;</td>
+    <td class="border" ng-repeat="alphabet in 
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N']"
+        >{{alphabet}}</td>
+    <td class="border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="border">13</td>
+    <td class="board-top-left-{{getPositionState(1,13)}}" ng-click="moveOrPickupDead(1,13)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-top-{{getPositionState(i,13)}}" ng-click="moveOrPickupDead(i,13)"></td>
+    <td class="board-top-right-{{getPositionState(13,13)}}" ng-click="moveOrPickupDead(13,13)"></td>
+    <td class="border">13</td>
+  </tr>
+  <tr ng-repeat="j in [12, 11]">
+    <td class="border">{{j}}</td>
+    <td class="board-left-{{getPositionState(1,j)}}" ng-click="moveOrPickupDead(1,j)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-normal-{{getPositionState(i,j)}}" ng-click="moveOrPickupDead(i,j)"></td>
+    <td class="board-right-{{getPositionState(13,j)}}" ng-click="moveOrPickupDead(13,j)"></td>
+    <td class="border">{{j}}</td>
+  </tr>
+  <tr>
+    <td class="border">10</td>
+    <td class="board-left-{{getPositionState(1,10)}}" ng-click="moveOrPickupDead(1,10)"></td>
+    <td class="board-normal-{{getPositionState(2,10)}}" ng-click="moveOrPickupDead(2,10)"></td>
+    <td class="board-normal-{{getPositionState(3,10)}}" ng-click="moveOrPickupDead(3,10)"></td>
+    <td class="board-star-{{getPositionState(4,10)}}" ng-click="moveOrPickupDead(4,10)"></td>
+    <td class="board-normal-{{getPositionState(5,10)}}" ng-click="moveOrPickupDead(5,10)"></td>
+    <td class="board-normal-{{getPositionState(6,10)}}" ng-click="moveOrPickupDead(6,10)"></td>
+    <td class="board-normal-{{getPositionState(7,10)}}" ng-click="moveOrPickupDead(7,10)"></td>
+    <td class="board-normal-{{getPositionState(8,10)}}" ng-click="moveOrPickupDead(8,10)"></td>
+    <td class="board-normal-{{getPositionState(9,10)}}" ng-click="moveOrPickupDead(9,10)"></td>
+    <td class="board-star-{{getPositionState(10,10)}}" ng-click="moveOrPickupDead(10,10)"></td>
+    <td class="board-normal-{{getPositionState(11,10)}}" ng-click="moveOrPickupDead(11,10)"></td>
+    <td class="board-normal-{{getPositionState(12,10)}}" ng-click="moveOrPickupDead(12,10)"></td>
+    <td class="board-right-{{getPositionState(13,10)}}" ng-click="moveOrPickupDead(13,10)"></td>
+    <td class="border">10</td>
+  </tr>
+  <tr ng-repeat="j in [9, 8]">
+    <td class="border">{{j}}</td>
+    <td class="board-left-{{getPositionState(1,j)}}" ng-click="moveOrPickupDead(1,j)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-normal-{{getPositionState(i,j)}}" ng-click="moveOrPickupDead(i,j)"></td>
+    <td class="board-right-{{getPositionState(13,j)}}" ng-click="moveOrPickupDead(13,j)"></td>
+    <td class="border">{{j}}</td>
+  </tr>
+  <tr>
+    <td class="border">7</td>
+    <td class="board-left-{{getPositionState(1,7)}}" ng-click="moveOrPickupDead(1,7)"></td>
+    <td class="board-normal-{{getPositionState(2,7)}}" ng-click="moveOrPickupDead(2,7)"></td>
+    <td class="board-normal-{{getPositionState(3,7)}}" ng-click="moveOrPickupDead(3,7)"></td>
+    <td class="board-normal-{{getPositionState(4,7)}}" ng-click="moveOrPickupDead(4,7)"></td>
+    <td class="board-normal-{{getPositionState(5,7)}}" ng-click="moveOrPickupDead(5,7)"></td>
+    <td class="board-normal-{{getPositionState(6,7)}}" ng-click="moveOrPickupDead(6,7)"></td>
+    <td class="board-star-{{getPositionState(7,7)}}" ng-click="moveOrPickupDead(7,7)"></td>
+    <td class="board-normal-{{getPositionState(8,7)}}" ng-click="moveOrPickupDead(8,7)"></td>
+    <td class="board-normal-{{getPositionState(9,7)}}" ng-click="moveOrPickupDead(9,7)"></td>
+    <td class="board-normal-{{getPositionState(10,7)}}" ng-click="moveOrPickupDead(10,7)"></td>
+    <td class="board-normal-{{getPositionState(11,7)}}" ng-click="moveOrPickupDead(11,7)"></td>
+    <td class="board-normal-{{getPositionState(12,7)}}" ng-click="moveOrPickupDead(12,7)"></td>
+    <td class="board-right-{{getPositionState(13,7)}}" ng-click="moveOrPickupDead(13,7)"></td>
+    <td class="border">7</td>
+  </tr>
+  <tr ng-repeat="j in [6, 5]">
+    <td class="border">{{j}}</td>
+    <td class="board-left-{{getPositionState(1,j)}}" ng-click="moveOrPickupDead(1,j)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-normal-{{getPositionState(i,j)}}" ng-click="moveOrPickupDead(i,j)"></td>
+    <td class="board-right-{{getPositionState(13,j)}}" ng-click="moveOrPickupDead(13,j)"></td>
+    <td class="border">{{j}}</td>
+  </tr>
+  <tr>
+    <td class="border">4</td>
+    <td class="board-left-{{getPositionState(1,4)}}" ng-click="moveOrPickupDead(1,4)"></td>
+    <td class="board-normal-{{getPositionState(2,4)}}" ng-click="moveOrPickupDead(2,4)"></td>
+    <td class="board-normal-{{getPositionState(3,4)}}" ng-click="moveOrPickupDead(3,4)"></td>
+    <td class="board-star-{{getPositionState(4,4)}}" ng-click="moveOrPickupDead(4,4)"></td>
+    <td class="board-normal-{{getPositionState(5,4)}}" ng-click="moveOrPickupDead(5,4)"></td>
+    <td class="board-normal-{{getPositionState(6,4)}}" ng-click="moveOrPickupDead(6,4)"></td>
+    <td class="board-normal-{{getPositionState(7,4)}}" ng-click="moveOrPickupDead(7,4)"></td>
+    <td class="board-normal-{{getPositionState(8,4)}}" ng-click="moveOrPickupDead(8,4)"></td>
+    <td class="board-normal-{{getPositionState(9,4)}}" ng-click="moveOrPickupDead(9,4)"></td>
+    <td class="board-star-{{getPositionState(10,4)}}" ng-click="moveOrPickupDead(10,4)"></td>
+    <td class="board-normal-{{getPositionState(11,4)}}" ng-click="moveOrPickupDead(11,4)"></td>
+    <td class="board-normal-{{getPositionState(12,4)}}" ng-click="moveOrPickupDead(12,4)"></td>
+    <td class="board-right-{{getPositionState(13,4)}}" ng-click="moveOrPickupDead(13,4)"></td>
+    <td class="border">4</td>
+  </tr>
+  <tr ng-repeat="j in [3, 2]">
+    <td class="border">{{j}}</td>
+    <td class="board-left-{{getPositionState(1,j)}}" ng-click="moveOrPickupDead(1,j)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-normal-{{getPositionState(i,j)}}" ng-click="moveOrPickupDead(i,j)"></td>
+    <td class="board-right-{{getPositionState(13,j)}}" ng-click="moveOrPickupDead(13,j)"></td>
+    <td class="border">{{j}}</td>
+  </tr>
+  <tr>
+    <td class="border">1</td>
+    <td class="board-bottom-left-{{getPositionState(1,1)}}" ng-click="moveOrPickupDead(1,1)"></td>
+    <td ng-repeat="i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+        class="board-bottom-{{getPositionState(i,1)}}" ng-click="moveOrPickupDead(i,1)"></td>
+    <td class="board-bottom-right-{{getPositionState(13,1)}}" ng-click="moveOrPickupDead(13,1)"></td>
+    <td class="border">1</td>
+  </tr>
+  <tr>
+    <td class="border">&nbsp;</td>
+    <td class="border" ng-repeat="alphabet in 
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N']"
+        >{{alphabet}}</td>
+    <td class="border">&nbsp;</td>
+  </tr>
+</table>

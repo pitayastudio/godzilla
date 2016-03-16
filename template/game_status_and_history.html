@@ -1,0 +1,33 @@
+<div>
+  Black [{{gameInfo.blackPlayer}}] Status:
+  <ul>
+    <li>Dead Stones Count: {{gameStatus.blackDeadCount}}
+		<li>Remaining Time: {{getBlackRemainingTimeString()}}
+		<!-- TODO 200 Pass black/whiteRemainingCountdownTimes -->
+		<li>Remaining Countdown Times: {{gameStatus.blackRemainingCountdownTimes}} (TBD)
+  </ul>
+</div>
+<div>
+  White [{{gameInfo.whitePlayer}}] Status:
+  <ul>
+    <li>Dead Stones Count: {{gameStatus.whiteDeadCount}}
+		<li>Remaining Time: {{getWhiteRemainingTimeString()}}
+		<li>Remaining Countdown Times: {{gameStatus.whiteRemainingCountdownTimes}} (TBD)
+  </ul>
+</div>
+<div>
+  {{gameStatus.currentPlayStage}}
+</div>
+<div>
+  Number of moves: {{gameHistorySummary.numberOfMoves}}
+</div>
+<div ng-if="gameHistorySummary.isLatestMovePass">
+  Latest move: PASS
+</div>
+<div ng-if="gameHistorySummary.latestMoveCoord">
+  Latest move coord:
+  ({{gameHistorySummary.latestMoveCoord.xPosition}}, {{gameHistorySummary.latestMoveCoord.yPosition}})
+</div>
+<div>
+  Color for next move: {{gameHistorySummary.colorForNextMove}}
+</div>

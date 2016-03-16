@@ -1,0 +1,50 @@
+<div>Settings:</div>
+<div>
+  <table>
+    <tr>
+      <td class="settings-field-name">Black:
+      <td><input type="radio" name="blackPlayer" value="human"
+          ng-model="$parent.gameInfo.blackPlayer"/>
+        Human
+      <td><input type="radio" name="blackPlayer" value="computer"
+          ng-model="$parent.gameInfo.blackPlayer"/>
+        Computer
+    </tr>
+    <tr>
+      <td class="settings-field-name">White:
+      <td><input type="radio" name="whitePlayer" value="human"
+          ng-model="$parent.gameInfo.whitePlayer"/>
+        Human
+      <td><input type="radio" name="whitePlayer" value="computer"
+          ng-model="$parent.gameInfo.whitePlayer"/>
+        Computer
+    </tr>
+  </table>
+</div>
+<div>
+  <div>
+    Board size:
+    <input type="radio" name="boardSize" value="19" ng-model="$parent.gameInfo.boardSize"/>19
+    <input type="radio" name="boardSize" value="13" ng-model="$parent.gameInfo.boardSize"/>13
+    <input type="radio" name="boardSize" value="9" ng-model="$parent.gameInfo.boardSize"/>9
+    <input type="radio" name="boardSize" value="5" ng-model="$parent.gameInfo.boardSize"/>5
+  </div>
+  <div>
+    Handicap Count: <input id="handicap-count" ng-model="$parent.gameInfo.handicapCount"/>
+  </div>
+  <div>
+    Komi:
+    <input type="radio" name="komi" value="6.5" ng-model="$parent.gameInfo.komi"/>6.5
+    <input type="radio" name="komi" value="7.5" ng-model="$parent.gameInfo.komi"/>7.5
+  </div>
+  <div>
+    Time Limit: <input id="time-limit" ng-model="$parent.gameInfo.timeLimitInMin"/> min
+  </div>
+  <div>
+    Countdown: <input id="time-countdown-sec" ng-model="$parent.gameInfo.timeCountdownInSec"/> sec
+    x <input id="time-countdown-times" ng-model="$parent.gameInfo.timeCountdownTimes"/> times
+  </div>
+</div>
+<div>
+  <button ng-click="newGame()">New Game</button>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html ng-app="MyApp">
+
+<head ng-cloak>
+  <meta charset="utf-8">
+  <title>webclient v20140317</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/angular-1.2.16/angular.js"></script>
+  <script src="js/angular-1.2.16/angular-route.js"></script>
+  <script src="js/godzilla.js"></script>
+  <script src="js/root_controller.js"></script>
+  <script src="js/game_play_controller.js"></script>
+  <script src="js/my_app.js"></script>
+</head>
+
+<body>
+	<div id="header">
+	  <div id="godzilla-logo">Godzilla</div>
+	</div>
+	<div id="main-content" ng-controller="RootCtrl">
+	  <div ng-view></div>
+	</div>
+	<div id="footer">
+	  CopyRight 2014
+	</div>
+</body>
+
+</html>
